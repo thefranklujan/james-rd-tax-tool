@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>R&D Tax Credits for Construction & Remodeling | James Johnson</title>
+<style>
+  :root {
+    --navy: #1a2744;
+    --blue: #2563eb;
+    --blue-dark: #1d4ed8;
+    --gold: #f59e0b;
+    --gold-dark: #d97706;
+    --green: #10b981;
+    --red: #ef4444;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / .1), 0 2px 4px -2px rgb(0 0 0 / .1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--gray-800);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, #0f172a 100%);
+    color: white;
+    padding: 60px 24px 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 50%, rgba(37,99,235,.25) 0%, transparent 60%),
+                radial-gradient(circle at 70% 80%, rgba(245,158,11,.15) 0%, transparent 50%);
+  }
+  .hero-content { position: relative; max-width: 800px; margin: 0 auto; }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(245,158,11,.15);
+    border: 1px solid rgba(245,158,11,.4);
+    color: var(--gold);
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    letter-spacing: .5px;
+  }
+  .hero h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  .hero h1 .gold { color: var(--gold); }
+  .hero p.subtitle {
+    font-size: clamp(16px, 2.5vw, 20px);
+    color: #94a3b8;
+    max-width: 640px;
+    margin: 0 auto 12px;
+  }
+  .hero .deadline {
+    background: rgba(239,68,68,.15);
+    border: 1px solid rgba(239,68,68,.4);
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 8px;
+    color: #fca5a5;
+    font-weight: 600;
+    font-size: 15px;
+    margin: 20px 0 32px;
+  }
+  .hero .deadline strong { color: #fff; }
+
+  /* ── COUNTDOWN ── */
+  .countdown-row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+  .countdown-box {
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 12px;
+    padding: 12px 18px;
+    min-width: 72px;
+    backdrop-filter: blur(8px);
+  }
+  .countdown-box .num {
+    display: block;
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--gold);
+    line-height: 1.1;
+  }
+  .countdown-box .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #94a3b8;
+  }
+
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 16px 36px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform .2s, box-shadow .2s;
+    box-shadow: 0 4px 20px rgba(245,158,11,.35);
+  }
+  .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(245,158,11,.5); }
+
+  /* ── SECTION SHARED ── */
+  section { padding: 72px 24px; }
+  .container { max-width: 1000px; margin: 0 auto; }
+  .section-label {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--blue);
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-size: clamp(26px, 4vw, 38px);
+    font-weight: 800;
+    color: var(--gray-900);
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .section-subtitle {
+    font-size: 17px;
+    color: var(--gray-600);
+    max-width: 640px;
+    margin-bottom: 40px;
+  }
+
+  /* ── CALCULATOR ── */
+  .calc-section { background: var(--gray-50); }
+  .calc-card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: var(--shadow-xl);
+    overflow: hidden;
+  }
+  .calc-header {
+    background: linear-gradient(135deg, var(--navy), #1e3a5f);
+    color: #fff;
+    padding: 28px 32px;
+  }
+  .calc-header h3 { font-size: 22px; font-weight: 700; }
+  .calc-header p { color: #94a3b8; font-size: 14px; margin-top: 4px; }
+  .calc-body { padding: 32px; }
+
+  .calc-field { margin-bottom: 24px; }
+  .calc-field label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--gray-700);
+    margin-bottom: 6px;
+  }
+  .calc-field .hint { font-size: 13px; color: var(--gray-600); margin-bottom: 6px; }
+  .calc-field input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: var(--gray-200);
+    outline: none;
+  }
+  .calc-field input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background: var(--blue);
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(37,99,235,.4);
+  }
+  .slider-val {
+    display: inline-block;
+    background: var(--blue);
+    color: #fff;
+    padding: 4px 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    min-width: 100px;
+    text-align: center;
+  }
+
+  .calc-field .checkbox-group { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+  .calc-field .checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .2s;
+    user-select: none;
+  }
+  .calc-field .checkbox-group label:has(input:checked) {
+    background: #eff6ff;
+    border-color: var(--blue);
+    color: var(--blue-dark);
+  }
+  .calc-field .checkbox-group input { accent-color: var(--blue); }
+
+  .result-panel {
+    background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+    border: 2px solid #86efac;
+    border-radius: 16px;
+    padding: 28px 32px;
+    text-align: center;
+    margin-top: 8px;
+  }
+  .result-panel .est-label {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #166534;
+    margin-bottom: 4px;
+  }
+  .result-panel .est-amount {
+    font-size: clamp(36px, 6vw, 52px);
+    font-weight: 800;
+    color: #15803d;
+    line-height: 1.1;
+  }
+  .result-panel .est-sub {
+    font-size: 14px;
+    color: #166534;
+    margin-top: 8px;
+  }
+  .result-panel .est-3yr {
+    display: inline-block;
+    margin-top: 12px;
+    background: #15803d;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  /* ── CHECKLIST ── */
+  .checklist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 12px;
+  }
+  .check-item {
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: .2s;
+    cursor: pointer;
+    user-select: none;
+  }
+  .check-item:hover { box-shadow: var(--shadow); }
+  .check-item.active { border-color: var(--green); background: #f0fdf4; }
+  .check-item-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 18px;
+  }
+  .check-icon {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    border: 2px solid var(--gray-300);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: .2s;
+    font-size: 14px;
+    color: transparent;
+  }
+  .check-item.active .check-icon {
+    background: var(--green);
+    border-color: var(--green);
+    color: #fff;
+  }
+  .check-item-header h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--gray-800);
+    flex: 1;
+  }
+  .check-item-header .arrow {
+    font-size: 18px;
+    color: var(--gray-600);
+    transition: .2s;
+  }
+  .check-item.open .check-item-header .arrow { transform: rotate(180deg); }
+  .check-item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+  }
+  .check-item.open .check-item-body { max-height: 200px; }
+  .check-item-body p {
+    padding: 0 18px 16px;
+    font-size: 14px;
+    color: var(--gray-600);
+    line-height: 1.5;
+  }
+
+  .qualify-meter {
+    margin-top: 32px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px 28px;
+    box-shadow: var(--shadow);
+    text-align: center;
+  }
+  .meter-bar {
+    width: 100%;
+    height: 16px;
+    background: var(--gray-200);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 12px 0;
+  }
+  .meter-fill {
+    height: 100%;
+    border-radius: 8px;
+    background: linear-gradient(90deg, var(--gold), var(--green));
+    transition: width .5s ease;
+    width: 0%;
+  }
+  .meter-text { font-size: 15px; color: var(--gray-600); }
+  .meter-text strong { color: var(--green); }
+
+  /* ── WHAT YOU CAN CLAIM ── */
+  .claim-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  .claim-card {
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: 14px;
+    padding: 22px;
+    transition: .2s;
+  }
+  .claim-card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+  .claim-card .icon {
+    width: 44px; height: 44px;
+    background: #eff6ff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+  .claim-card h4 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+  .claim-card p { font-size: 14px; color: var(--gray-600); }
+
+  /* ── PROCESS ── */
+  .process-section { background: var(--gray-50); }
+  .process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+  }
+  .process-step {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    position: relative;
+    padding-bottom: 32px;
+  }
+  .process-step:last-child { padding-bottom: 0; }
+  .step-num {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    background: var(--blue);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 800;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+  }
+  .process-step:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    left: 23px;
+    top: 48px;
+    bottom: 0;
+    width: 2px;
+    background: var(--gray-200);
+  }
+  .step-content h4 { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+  .step-content p { font-size: 15px; color: var(--gray-600); }
+
+  /* ── WHY DIFFERENT ── */
+  .trust-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  .trust-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--blue);
+  }
+  .trust-card h4 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+  .trust-card p { font-size: 14px; color: var(--gray-600); }
+
+  /* ── ADDITIONAL SERVICES ── */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .service-card {
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: 16px;
+    padding: 28px 24px;
+    transition: .2s;
+    display: flex;
+    flex-direction: column;
+  }
+  .service-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+  .service-card .badge {
+    display: inline-block;
+    background: #dbeafe;
+    color: var(--blue-dark);
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-bottom: 14px;
+    align-self: flex-start;
+  }
+  .service-card h4 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+  .service-card p { font-size: 14px; color: var(--gray-600); flex: 1; }
+  .service-card .link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--blue);
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 16px;
+  }
+  .service-card .link:hover { text-decoration: underline; }
+
+  /* ── USE CASES ── */
+  .use-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+  }
+  .use-tag {
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .use-tag .emoji { font-size: 20px; }
+
+  /* ── CTA FINAL ── */
+  .cta-section {
+    background: linear-gradient(135deg, var(--navy) 0%, #0f172a 100%);
+    color: #fff;
+    text-align: center;
+    padding: 80px 24px;
+    position: relative;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(245,158,11,.12) 0%, transparent 60%);
+  }
+  .cta-section .container { position: relative; }
+  .cta-section h2 {
+    font-size: clamp(28px, 4.5vw, 42px);
+    font-weight: 800;
+    margin-bottom: 16px;
+  }
+  .cta-section p {
+    font-size: 18px;
+    color: #94a3b8;
+    max-width: 560px;
+    margin: 0 auto 32px;
+  }
+  .cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 16px 36px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .2s;
+    box-shadow: 0 4px 20px rgba(245,158,11,.3);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(245,158,11,.5); }
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.2);
+    color: #fff;
+    padding: 16px 36px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .2s;
+  }
+  .btn-secondary:hover { background: rgba(255,255,255,.18); }
+
+  .contact-info {
+    margin-top: 40px;
+    color: #94a3b8;
+    font-size: 15px;
+  }
+  .contact-info strong { color: #fff; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #0f172a;
+    color: #64748b;
+    text-align: center;
+    padding: 24px;
+    font-size: 13px;
+    border-top: 1px solid rgba(255,255,255,.05);
+  }
+
+  /* ── ANIMATIONS ── */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .6s ease, transform .6s ease;
+  }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 640px) {
+    section { padding: 48px 16px; }
+    .countdown-row { gap: 8px; }
+    .countdown-box { min-width: 60px; padding: 10px 12px; }
+    .countdown-box .num { font-size: 24px; }
+    .calc-body { padding: 20px; }
+    .checklist-grid { grid-template-columns: 1fr; }
+    .cta-buttons { flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Federal R&D Tax Credit for Construction</div>
+    <h1>Are You Leaving <span class="gold">$50K&ndash;$150K+</span> on the Table?</h1>
+    <p class="subtitle">Most Construction &amp; Remodeling companies qualify for the Federal R&D Tax Credit but never claim it. You can go back 3 years.</p>
+    <div class="deadline">Deadline to claim 2022 credits: <strong>April 15, 2026</strong></div>
+
+    <div class="countdown-row" id="countdown">
+      <div class="countdown-box"><span class="num" id="cd-days">--</span><span class="label">Days</span></div>
+      <div class="countdown-box"><span class="num" id="cd-hrs">--</span><span class="label">Hours</span></div>
+      <div class="countdown-box"><span class="num" id="cd-min">--</span><span class="label">Minutes</span></div>
+      <div class="countdown-box"><span class="num" id="cd-sec">--</span><span class="label">Seconds</span></div>
+    </div>
+
+    <a class="hero-cta" href="https://calendly.com/jjsafemoney/business-discovery-call" target="_blank">
+      Schedule Free Discovery Call &rarr;
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════════ CALCULATOR ═══════════════ -->
+<section class="calc-section" id="calculator">
+  <div class="container">
+    <span class="section-label">Savings Estimator</span>
+    <h2 class="section-title">Estimate Your R&D Tax Credit</h2>
+    <p class="section-subtitle">Adjust the sliders below to see a rough estimate of what you could recover.</p>
+
+    <div class="calc-card fade-in">
+      <div class="calc-header">
+        <h3>R&D Tax Credit Calculator</h3>
+        <p>Get a quick estimate in seconds &mdash; no obligation</p>
+      </div>
+      <div class="calc-body">
+        <div class="calc-field">
+          <label>Annual Revenue</label>
+          <div class="hint">Your total annual revenue from construction/remodeling</div>
+          <input type="range" id="revenue" min="500000" max="10000000" step="100000" value="2000000">
+          <div style="margin-top:8px"><span class="slider-val" id="revenue-val">$2,000,000</span></div>
+        </div>
+
+        <div class="calc-field">
+          <label>Number of Employees</label>
+          <div class="hint">Full-time employees involved in project work</div>
+          <input type="range" id="employees" min="5" max="200" step="1" value="20">
+          <div style="margin-top:8px"><span class="slider-val" id="employees-val">20</span></div>
+        </div>
+
+        <div class="calc-field">
+          <label>Which activities do you perform?</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" checked onchange="calcCredit()"> Custom Design</label>
+            <label><input type="checkbox" checked onchange="calcCredit()"> Engineering Solutions</label>
+            <label><input type="checkbox" onchange="calcCredit()"> Energy Efficiency</label>
+            <label><input type="checkbox" onchange="calcCredit()"> Material R&D</label>
+            <label><input type="checkbox" onchange="calcCredit()"> BIM / Tech</label>
+            <label><input type="checkbox" onchange="calcCredit()"> Custom Fabrication</label>
+          </div>
+        </div>
+
+        <div class="result-panel" id="result-panel">
+          <div class="est-label">Estimated Annual R&D Tax Credit</div>
+          <div class="est-amount" id="est-amount">$48,000</div>
+          <div class="est-sub">Based on your inputs. Actual amounts may vary.</div>
+          <div class="est-3yr" id="est-3yr">3-Year Total: ~$144,000</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ QUALIFYING ACTIVITIES ═══════════════ -->
+<section id="checklist">
+  <div class="container">
+    <span class="section-label">Do You Qualify?</span>
+    <h2 class="section-title">Tap Each Activity You Perform</h2>
+    <p class="section-subtitle">70&ndash;80% of businesses that qualify never claim because they don't know they're eligible. Check if you do.</p>
+
+    <div class="checklist-grid" id="checklist-grid">
+      <!-- filled by JS -->
+    </div>
+
+    <div class="qualify-meter fade-in">
+      <strong style="font-size:18px" id="meter-headline">Select activities above</strong>
+      <div class="meter-bar"><div class="meter-fill" id="meter-fill"></div></div>
+      <p class="meter-text" id="meter-text">Tap items to see your qualification likelihood</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ WHAT YOU CAN CLAIM ═══════════════ -->
+<section style="background:var(--gray-50)">
+  <div class="container">
+    <span class="section-label">Claimable Expenses</span>
+    <h2 class="section-title">What Can You Claim?</h2>
+    <p class="section-subtitle">These common business expenses often qualify for the R&D credit.</p>
+    <div class="claim-cards fade-in">
+      <div class="claim-card">
+        <div class="icon">&#128188;</div>
+        <h4>Your Wages</h4>
+        <p>Time spent on design, engineering, and problem-solving activities</p>
+      </div>
+      <div class="claim-card">
+        <div class="icon">&#128119;</div>
+        <h4>Employee Wages</h4>
+        <p>Project managers, foremen, and skilled tradespeople involved in R&D</p>
+      </div>
+      <div class="claim-card">
+        <div class="icon">&#129521;</div>
+        <h4>Supplies &amp; Materials</h4>
+        <p>Materials used in testing and experimentation phases</p>
+      </div>
+      <div class="claim-card">
+        <div class="icon">&#128187;</div>
+        <h4>Software Costs</h4>
+        <p>BIM, CAD, estimating software, and project management tools</p>
+      </div>
+      <div class="claim-card">
+        <div class="icon">&#128221;</div>
+        <h4>Subcontractor Costs</h4>
+        <p>Engineers, architects, and consultants performing technical work</p>
+      </div>
+      <div class="claim-card">
+        <div class="icon">&#128176;</div>
+        <h4>Payroll Tax Offset</h4>
+        <p>Credits can offset up to $250,000/year in payroll taxes</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PROCESS ═══════════════ -->
+<section class="process-section">
+  <div class="container">
+    <span class="section-label">Simple &amp; Painless</span>
+    <h2 class="section-title">How It Works</h2>
+    <p class="section-subtitle">From first call to collecting your credit &mdash; we handle the heavy lifting.</p>
+
+    <div class="process-steps fade-in">
+      <div class="process-step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h4>15-Minute Discovery Call</h4>
+          <p>No cost, no obligation. We quickly assess if you're a good fit.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h4>We Analyze Your Activities</h4>
+          <p>Our experts identify every qualifying activity and expense from the past 3 years.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h4>IRS-Ready Report</h4>
+          <p>We deliver a triple-reviewed, audit-proof report and coordinate with your CPA.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h4>You Get Your Money</h4>
+          <p>Credits are applied to your tax returns &mdash; potentially a six-figure recovery.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ WHY DIFFERENT ═══════════════ -->
+<section>
+  <div class="container">
+    <span class="section-label">Peace of Mind</span>
+    <h2 class="section-title">Why Our Process Is Different</h2>
+    <p class="section-subtitle">Triple-review process for conservative, defensible, audit-proof results.</p>
+
+    <div class="trust-cards fade-in">
+      <div class="trust-card">
+        <h4>Expert Analysis</h4>
+        <p>We identify every qualifying activity under IRS guidelines &mdash; nothing gets missed.</p>
+      </div>
+      <div class="trust-card">
+        <h4>Attorney Oversight</h4>
+        <p>Tax attorney Mike Hallock reviews every report for legal compliance.</p>
+      </div>
+      <div class="trust-card">
+        <h4>Independent CPA Validation</h4>
+        <p>An outside CPA verifies accuracy and IRS-readiness before delivery.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ WHAT WOULD YOU DO ═══════════════ -->
+<section style="background:var(--gray-50)">
+  <div class="container">
+    <span class="section-label">Imagine the Possibilities</span>
+    <h2 class="section-title">What Could You Do With $50K&ndash;$150K+?</h2>
+    <div class="use-tags fade-in">
+      <div class="use-tag"><span class="emoji">&#128666;</span> Purchase new equipment or vehicles</div>
+      <div class="use-tag"><span class="emoji">&#128119;</span> Hire additional technicians</div>
+      <div class="use-tag"><span class="emoji">&#127758;</span> Expand your service area</div>
+      <div class="use-tag"><span class="emoji">&#128184;</span> Increase your take-home pay</div>
+      <div class="use-tag"><span class="emoji">&#128170;</span> Build a cash reserve for slower seasons</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ADDITIONAL SERVICES ═══════════════ -->
+<section id="services">
+  <div class="container">
+    <span class="section-label">Beyond R&D Credits</span>
+    <h2 class="section-title">No-Cost Business Cash &amp; Benefit Review</h2>
+    <p class="section-subtitle">Additional ways we help your business keep more money and operate with less stress.</p>
+
+    <div class="services-grid fade-in">
+      <div class="service-card">
+        <div class="badge">Free Recovery</div>
+        <h4>Civil Lawsuit Recovery (FRS)</h4>
+        <p>Recover funds from class action settlements you didn't know existed. Completely free to you.</p>
+        <a class="link" href="https://www.frsco.com/LifetimeNavigators/?tfa_135=11445" target="_blank">Learn More &rarr;</a>
+      </div>
+      <div class="service-card">
+        <div class="badge">No Cost to You</div>
+        <h4>Champion Health &amp; Wellness</h4>
+        <p>No out-of-pocket cost to you or employees. Raises employee payroll and reduces your taxes.</p>
+        <a class="link" href="https://umustsee.net/VDH1IQ" target="_blank">Learn More &rarr;</a>
+      </div>
+      <div class="service-card">
+        <div class="badge">HR &amp; Payroll</div>
+        <h4>TMTBSI Payroll &amp; HCM</h4>
+        <p>Easy-to-use payroll and employee management. Improves compliance, saves time, implements CHAMP Plan within 30 days.</p>
+        <a class="link" href="https://umustsee.net/BCW2SM" target="_blank">Learn More &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FINAL CTA ═══════════════ -->
+<section class="cta-section" id="contact">
+  <div class="container">
+    <h2>Ready to Claim What's Yours?</h2>
+    <p>No cost and no obligation to see if you qualify. The first call is just 15 minutes.</p>
+    <div class="cta-buttons">
+      <a class="btn-primary" href="https://calendly.com/jjsafemoney/business-discovery-call" target="_blank">
+        &#128222; Schedule Discovery Call
+      </a>
+      <a class="btn-secondary" href="tel:9496329483">
+        Call James: (949) 632-9483
+      </a>
+    </div>
+    <div class="contact-info">
+      <p style="margin-top:16px"><strong>James Johnson</strong> &mdash; President</p>
+      <p>Office: (949) 830-3380 &nbsp;|&nbsp; Direct: (949) 632-9483</p>
+      <p style="margin-top:16px;color:#fca5a5;font-weight:600">The deadline to amend your 2022 return is April 15, 2026 &mdash; the clock is ticking!</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 James Johnson &mdash; R&D Tax Credits for Construction &amp; Remodeling
+</footer>
+
+<script>
+// ── COUNTDOWN ──
+function updateCountdown() {
+  const deadline = new Date('2026-04-15T23:59:59');
+  const now = new Date();
+  const diff = deadline - now;
+  if (diff <= 0) {
+    document.getElementById('cd-days').textContent = '0';
+    document.getElementById('cd-hrs').textContent = '0';
+    document.getElementById('cd-min').textContent = '0';
+    document.getElementById('cd-sec').textContent = '0';
+    return;
+  }
+  const d = Math.floor(diff / 86400000);
+  const h = Math.floor((diff % 86400000) / 3600000);
+  const m = Math.floor((diff % 3600000) / 60000);
+  const s = Math.floor((diff % 60000) / 1000);
+  document.getElementById('cd-days').textContent = d;
+  document.getElementById('cd-hrs').textContent = String(h).padStart(2, '0');
+  document.getElementById('cd-min').textContent = String(m).padStart(2, '0');
+  document.getElementById('cd-sec').textContent = String(s).padStart(2, '0');
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+// ── CALCULATOR ──
+const fmt = n => '$' + n.toLocaleString();
+
+function calcCredit() {
+  const rev = +document.getElementById('revenue').value;
+  const emp = +document.getElementById('employees').value;
+  const checks = document.querySelectorAll('.checkbox-group input:checked').length;
+  const activityMult = .6 + (checks / 6) * .4; // 60-100% based on activities
+  // Rough model: ~6.5% credit rate on qualifying R&D spend (~20-35% of revenue)
+  const qualifyingSpend = rev * (.20 + (emp / 200) * .15) * activityMult;
+  const credit = Math.round(qualifyingSpend * .065 / 1000) * 1000;
+  const clamped = Math.max(15000, Math.min(credit, 500000));
+  document.getElementById('est-amount').textContent = fmt(clamped);
+  document.getElementById('est-3yr').textContent = '3-Year Total: ~' + fmt(clamped * 3);
+}
+
+document.getElementById('revenue').addEventListener('input', function() {
+  document.getElementById('revenue-val').textContent = fmt(+this.value);
+  calcCredit();
+});
+document.getElementById('employees').addEventListener('input', function() {
+  document.getElementById('employees-val').textContent = this.value;
+  calcCredit();
+});
+calcCredit();
+
+// ── CHECKLIST ──
+const activities = [
+  { title: 'Custom Design Solutions', desc: 'Unique architectural challenges, structural problem-solving, adapting designs to site constraints, load-bearing modifications.' },
+  { title: 'Building System Integration', desc: 'Coordinating HVAC, electrical, plumbing in tight spaces, resolving trade conflicts, innovative routing solutions.' },
+  { title: 'Material Selection & Testing', desc: 'Evaluating new building materials, testing alternative products, improving durability, cost-reduction experiments.' },
+  { title: 'Structural Engineering', desc: 'Foundation adaptations for difficult soil, seismic retrofitting, load redistribution, beam sizing calculations.' },
+  { title: 'Energy Efficiency Improvements', desc: 'Insulation optimization, HVAC efficiency upgrades, solar integration, green building, LEED compliance.' },
+  { title: 'Process & Workflow Optimization', desc: 'Streamlining construction sequences, reducing waste, improving safety procedures, scheduling optimization.' },
+  { title: 'Technology Integration', desc: 'BIM modeling, 3D design software, project management systems, drone surveying, digital estimating tools.' },
+  { title: 'Renovation & Retrofit Challenges', desc: 'Historic preservation, working within existing structures, code compliance upgrades, accessibility modifications.' },
+  { title: 'Site-Specific Problem Solving', desc: 'Difficult terrain solutions, water management, erosion control, utility conflicts, environmental constraints.' },
+  { title: 'Custom Fabrication Work', desc: 'One-off millwork, custom metalwork, unique trim solutions, specialty installations.' },
+];
+
+const grid = document.getElementById('checklist-grid');
+activities.forEach((a, i) => {
+  const div = document.createElement('div');
+  div.className = 'check-item';
+  div.innerHTML = `
+    <div class="check-item-header">
+      <div class="check-icon">&#10003;</div>
+      <h4>${a.title}</h4>
+      <span class="arrow">&#9662;</span>
+    </div>
+    <div class="check-item-body"><p>${a.desc}</p></div>
+  `;
+  div.addEventListener('click', () => {
+    div.classList.toggle('active');
+    div.classList.toggle('open');
+    updateMeter();
+  });
+  grid.appendChild(div);
+});
+
+function updateMeter() {
+  const total = activities.length;
+  const checked = document.querySelectorAll('.check-item.active').length;
+  const pct = (checked / total) * 100;
+  document.getElementById('meter-fill').style.width = pct + '%';
+
+  const headline = document.getElementById('meter-headline');
+  const text = document.getElementById('meter-text');
+
+  if (checked === 0) {
+    headline.textContent = 'Select activities above';
+    text.innerHTML = 'Tap items to see your qualification likelihood';
+  } else if (checked <= 2) {
+    headline.textContent = 'You likely qualify!';
+    text.innerHTML = `<strong>${checked}</strong> of ${total} activities selected &mdash; even 1 activity can qualify you for the credit.`;
+  } else if (checked <= 5) {
+    headline.textContent = 'Strong qualification!';
+    text.innerHTML = `<strong>${checked}</strong> of ${total} activities selected &mdash; you have a strong claim for a significant credit.`;
+  } else {
+    headline.textContent = 'Excellent &mdash; major credit potential!';
+    text.innerHTML = `<strong>${checked}</strong> of ${total} activities selected &mdash; you're likely leaving substantial money on the table.`;
+  }
+}
+
+// ── SCROLL ANIMATIONS ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
